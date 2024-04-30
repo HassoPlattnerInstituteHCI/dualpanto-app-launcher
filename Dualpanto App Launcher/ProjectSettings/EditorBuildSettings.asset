@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Draft.unity
     guid: 9ff8a99174f3fb94882b7bf76b01514a
+  - enabled: 0
+    path: Assets/unity-dualpanto-framework/Assets/ExampleScenes/ForceField.unity
+    guid: 9a18cd63a01cfa240b5a49bc41614378
+  - enabled: 0
+    path: Assets/unity-dualpanto-framework/Assets/ExampleScenes/Obstacles.unity
+    guid: 216fd82601166954882e0105c3dff251
+  - enabled: 0
+    path: Assets/unity-dualpanto-framework/Assets/ExampleScenes/Movement.unity
+    guid: c41266073f03d404b808d8cacbe08952
   m_configObjects: {}

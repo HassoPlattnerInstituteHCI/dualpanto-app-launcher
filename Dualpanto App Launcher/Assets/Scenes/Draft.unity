@@ -341,7 +341,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sumo Battle
+  m_text: 'ForceField
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -532,7 +534,7 @@ GameObject:
   - component: {fileID: 882577770}
   - component: {fileID: 882577769}
   m_Layer: 5
-  m_Name: BowlingBtn
+  m_Name: MovementBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -605,7 +607,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2064052453}
         m_TargetAssemblyTypeName: LauncherUI, Assembly-CSharp
-        m_MethodName: startBowling
+        m_MethodName: startMovement
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -666,7 +668,7 @@ GameObject:
   - component: {fileID: 1160216281}
   - component: {fileID: 1160216280}
   m_Layer: 5
-  m_Name: Game3Btn
+  m_Name: ObstaclesBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -739,7 +741,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2064052453}
         m_TargetAssemblyTypeName: LauncherUI, Assembly-CSharp
-        m_MethodName: startCanToss
+        m_MethodName: startObstacles
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -845,7 +847,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bowling
+  m_text: Movement
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1115,7 +1117,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Can Toss
+  m_text: Obstacles
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1497,7 +1499,7 @@ GameObject:
   - component: {fileID: 2096505489}
   - component: {fileID: 2096505488}
   m_Layer: 5
-  m_Name: SumoBattleBtn
+  m_Name: ForceFieldBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1570,7 +1572,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2064052453}
         m_TargetAssemblyTypeName: LauncherUI, Assembly-CSharp
-        m_MethodName: startSumo
+        m_MethodName: startForceField
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

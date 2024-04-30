@@ -5,26 +5,37 @@ using UnityEngine;
 
 public class LauncherUI : MonoBehaviour
 {
-    // public Button SumoBattleBtn;
 
-    public void startSumo() {
-        string pathSumo = Application.dataPath + "/../Builds/SumoBattle/Sumo Battle Student.exe";
-        Process.Start(pathSumo);
+    // public void startSumo() {
+    //     string pathSumo = Application.dataPath + "/../Builds/SumoBattle/Sumo Battle Student.exe";
+    //     Process.Start(pathSumo);
+    // }
 
-        // transform.Find("Game1Btn").GetComponent<Button>().ClickFunc = () => {
-        //     string path = Application.dataPath + "/../Builds/SumoBattle/Sumo Battle Student.exe";
-        //     Process.Start(path);
-        // };
+    // public void startBowling() {
+    //     string pathBowling = Application.dataPath + "/../Builds/Bowling/Bowling.exe";
+    //     Process.Start(pathBowling);
+    // }
+
+    // public void startCanToss() {
+    //     string pathCanToss = Application.dataPath + "/../Builds/Dosenwerfen/Dosenwerfen.exe";
+    //     Process.Start(pathCanToss);
+    // }
+
+    public void startForceField() {
+        // change ".exe" in data path to ".app" for mac
+        string pathForceField = Application.dataPath + "/../Builds/ForceField/ForceField.exe";
+        // Process.Start should also work on mac (hopefully)
+        Process.Start(pathForceField);
     }
 
-    public void startBowling() {
-        string pathBowling = Application.dataPath + "/../Builds/Bowling/Bowling.exe";
-        Process.Start(pathBowling);
+    public void startMovement() {
+        string pathMovement = Application.dataPath + "/../Builds/Movement/Movement.exe";
+        Process.Start(pathMovement);
     }
 
-    public void startCanToss() {
-        string pathCanToss = Application.dataPath + "/../Builds/Dosenwerfen/Dosenwerfen.exe";
-        Process.Start(pathCanToss);
+    public void startObstacles() {
+        string pathObstacles = Application.dataPath + "/../Builds/Obstacles/Obstacles.exe";
+        Process.Start(pathObstacles);
     }
 
 }
