@@ -6,20 +6,6 @@ using UnityEngine;
 public class LauncherUI : MonoBehaviour
 {
 
-    // public void startSumo() {
-    //     string pathSumo = Application.dataPath + "/../Builds/SumoBattle/Sumo Battle Student.exe";
-    //     Process.Start(pathSumo);
-    // }
-
-    // public void startBowling() {
-    //     string pathBowling = Application.dataPath + "/../Builds/Bowling/Bowling.exe";
-    //     Process.Start(pathBowling);
-    // }
-
-    // public void startCanToss() {
-    //     string pathCanToss = Application.dataPath + "/../Builds/Dosenwerfen/Dosenwerfen.exe";
-    //     Process.Start(pathCanToss);
-    // }
 
     public void startForceField() {
 
@@ -36,17 +22,17 @@ public class LauncherUI : MonoBehaviour
         #endif
     }
 
-    public void startMovement() {
-        #if UNITY_STANDALONE_WIN
-            string pathMovementW = Application.dataPath + "/../Builds/Movement/Movement.exe";
-            Process.Start(pathMovementW);
-        #endif
+    // public void startMovement() {
+    //     #if UNITY_STANDALONE_WIN
+    //         string pathMovementW = Application.dataPath + "/../Builds/Movement/Movement.exe";
+    //         Process.Start(pathMovementW);
+    //     #endif
 
-        #if UNITY_STANDALONE_OSX
-            string pathMovementO = Application.dataPath + "/Games/Movement.app";
-            Process.Start(pathMovementO);
-        #endif
-    }
+    //     #if UNITY_STANDALONE_OSX
+    //         string pathMovementO = Application.dataPath + "/Games/Movement.app";
+    //         Process.Start(pathMovementO);
+    //     #endif
+    // }
 
     public void startObstacles() {
         #if UNITY_STANDALONE_WIN
@@ -57,6 +43,27 @@ public class LauncherUI : MonoBehaviour
         #if UNITY_STANDALONE_OSX
             string pathObstaclesO = Application.dataPath + "/Games/Obstacles.app";
             Process.Start(pathObstaclesO);
+        #endif
+    }
+
+    public void startFruitNinja() {
+        #if UNITY_STANDALONE_WIN
+            string pathFruitNinjaW = Application.dataPath + "/../Builds/FruitNinja/FruitNinja.exe";
+            Process.Start(pathFruitNinjaW);
+        #endif
+    }
+
+    public void startMinigolf() {
+        #if UNITY_STANDALONE_WIN
+            string pathMinigolfW = Application.dataPath + "/../Builds/Minigolf/Minigolf.exe";
+            Process.Start(pathMinigolfW);
+        #endif
+    }
+
+    public void startTetris() {
+        #if UNITY_STANDALONE_WIN
+            string pathTetrisW = Application.dataPath + "/../Builds/Tetris/Tetris.exe";
+            Process.Start(pathTetrisW);
         #endif
     }
 
