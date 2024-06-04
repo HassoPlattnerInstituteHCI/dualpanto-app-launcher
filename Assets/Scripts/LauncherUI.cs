@@ -72,4 +72,15 @@ public class LauncherUI : MonoBehaviour
         #endif
     }
 
+    public void startRefresh() {
+        #if UNITY_STANDALONE_WIN
+            string pathRefreshW = Application.dataPath + "/../../../../Test_2/Git_Automation.bat";
+            Process.Start(pathRefreshW);
+        #endif
+    }
+
+    public void exitGame() {
+        Application.Quit();
+    }
+
 }
