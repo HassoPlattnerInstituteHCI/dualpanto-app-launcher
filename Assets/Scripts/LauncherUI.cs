@@ -20,6 +20,11 @@ public class LauncherUI : MonoBehaviour
             string pathForceFieldO = Application.dataPath + "/Games/ForceField.app";
             Process.Start(pathForceFieldO);
         #endif
+
+        #if UNITY_STANDALONE_LINUX
+            string pathForceFieldL = Application.dataPath + "/../Builds/ForceField/ForceField.x86_64";
+            Process.Start(pathForceFieldL);
+        #endif
     }
 
     // public void startMovement() {
