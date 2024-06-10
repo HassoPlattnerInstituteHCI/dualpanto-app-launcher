@@ -27,18 +27,6 @@ public class LauncherUI : MonoBehaviour
         #endif
     }
 
-    // public void startMovement() {
-    //     #if UNITY_STANDALONE_WIN
-    //         string pathMovementW = Application.dataPath + "/../Builds/Movement/Movement.exe";
-    //         Process.Start(pathMovementW);
-    //     #endif
-
-    //     #if UNITY_STANDALONE_OSX
-    //         string pathMovementO = Application.dataPath + "/Games/Movement.app";
-    //         Process.Start(pathMovementO);
-    //     #endif
-    // }
-
     public void startObstacles() {
         #if UNITY_STANDALONE_WIN
             string pathObstaclesW = Application.dataPath + "/../Builds/Obstacles/Obstacles.exe";
@@ -72,10 +60,35 @@ public class LauncherUI : MonoBehaviour
         #endif
     }
 
+    public void startMove() {
+        #if UNITY_STANDALONE_WIN
+            string pathMoveW = Application.dataPath + "/../Move.bat";
+            Process.Start(new ProcessStartInfo {
+                FileName = pathMoveW,
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                CreateNoWindow = true
+            });
+        #endif
+    }
+
     public void startRefresh() {
         #if UNITY_STANDALONE_WIN
             string pathRefreshW = Application.dataPath + "/../../../../Test_2/Git_Automation.bat";
-            Process.Start(pathRefreshW);
+            Process.Start(new ProcessStartInfo {
+                FileName = pathRefreshW,
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                CreateNoWindow = true
+            });
+
+        //     while (!Process.HasExited) {
+        //     yield return null;
+        // }
+
+        // startMove();
         #endif
     }
 
