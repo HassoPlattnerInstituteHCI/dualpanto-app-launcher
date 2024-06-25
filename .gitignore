@@ -71,4 +71,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 #Builds 
-# _Build/Windows/Builds/*/
+_Build/Windows/Builds/*/
