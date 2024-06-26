@@ -60,18 +60,16 @@ public class LauncherUI : MonoBehaviour
         #endif
     }
 
-    public void startMove() {
-        #if UNITY_STANDALONE_WIN
-            string pathMoveW = Application.dataPath + "/../Move.bat";
-            Process.Start(new ProcessStartInfo {
-                FileName = pathMoveW,
-                UseShellExecute = false,
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-                CreateNoWindow = true
-            });
-        #endif
-    }
+    // public void refreshSelected() {
+    //     #if UNITY_STANDALONE_WIN
+    //         for (i=0; i<=5; i++) {
+    //             if (Refresh.refr[i]) {
+    //                 string pathPullW = Application.dataPath + "/../Builds/"
+    //                 Process.Start(pathPullW);
+    //             }
+    //         }
+    //     #endif
+    // }
 
     public void startRefresh() {
         #if UNITY_STANDALONE_WIN
@@ -83,12 +81,6 @@ public class LauncherUI : MonoBehaviour
                 RedirectStandardError = true,
                 CreateNoWindow = true
             });
-
-        //     while (!Process.HasExited) {
-        //     yield return null;
-        // }
-
-        // startMove();
         #endif
     }
 
