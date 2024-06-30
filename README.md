@@ -5,7 +5,8 @@
 3. Select the scene(s) you want to be included in your build and the target platform (right now only Windows works).
 4. Click "Build", select your "Build" folder and build it.
 5. If the name is different to your branch/team name, rename the build (and the `projectname_Data` folder) to match the branch name.
-6. Push the build to git.
+6. In the .gitignore file in your repo, remove any line that excludes builds (like `[Bb]uild/`).
+7. Push the build to git.
 
 
 
