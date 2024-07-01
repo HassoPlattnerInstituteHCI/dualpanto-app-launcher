@@ -53,10 +53,10 @@ public class LauncherUI : MonoBehaviour
         #endif
     }
 
-    public void startTetris() {
+    public void start5() {
         #if UNITY_STANDALONE_WIN
-            string pathTetrisW = Application.dataPath + "/../Builds/Tetris/Tetris.exe";
-            Process.Start(pathTetrisW);
+            string path5W = Application.dataPath + "/../Builds/sumo/Build/sumo.exe";
+            Process.Start(path5W);
         #endif
     }
 
@@ -73,7 +73,7 @@ public class LauncherUI : MonoBehaviour
 
     public void startRefresh() {
         #if UNITY_STANDALONE_WIN
-            string pathRefreshW = Application.dataPath + "/../Git_Automation.bat";
+            string pathRefreshW = Application.dataPath + "/../Builds/Git_Automation.bat";
             Process.Start(new ProcessStartInfo {
                 FileName = pathRefreshW,
                 UseShellExecute = false,
