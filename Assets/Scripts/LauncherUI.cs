@@ -2,61 +2,22 @@ using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using UnityEngine.UI;
 
 public class LauncherUI : MonoBehaviour
 {
 
-
-    public void startForceField() {
-
+    public void startGame(Button button) {
+        string ButtonName = button.name;
+        int ButtonNumber = int.Parse(ButtonName);
         #if UNITY_STANDALONE_WIN
-        // change ".exe" in data path to ".app" for mac
-            string pathForceFieldW = Application.dataPath + "/../Builds/ForceField/ForceField.exe";
-        // Process.Start should also work on mac (hopefully)
-            Process.Start(pathForceFieldW);
-        #endif
-
-        #if UNITY_STANDALONE_OSX
-            string pathForceFieldO = Application.dataPath + "/Games/ForceField.app";
-            Process.Start(pathForceFieldO);
-        #endif
-
-        #if UNITY_STANDALONE_LINUX
-            string pathForceFieldL = Application.dataPath + "/../Builds/ForceField/ForceField.x86_64";
-            Process.Start(pathForceFieldL);
-        #endif
-    }
-
-    public void startObstacles() {
-        #if UNITY_STANDALONE_WIN
-            string pathObstaclesW = Application.dataPath + "/../Builds/Obstacles/Obstacles.exe";
-            Process.Start(pathObstaclesW);
-        #endif
-
-        #if UNITY_STANDALONE_OSX
-            string pathObstaclesO = Application.dataPath + "/Games/Obstacles.app";
-            Process.Start(pathObstaclesO);
-        #endif
-    }
-
-    public void startFruitNinja() {
-        #if UNITY_STANDALONE_WIN
-            string pathFruitNinjaW = Application.dataPath + "/../Builds/FruitNinja/FruitNinja.exe";
-            Process.Start(pathFruitNinjaW);
-        #endif
-    }
-
-    public void startMinigolf() {
-        #if UNITY_STANDALONE_WIN
-            string pathMinigolfW = Application.dataPath + "/../Builds/Minigolf/Minigolf.exe";
-            Process.Start(pathMinigolfW);
-        #endif
-    }
-
-    public void start5() {
-        #if UNITY_STANDALONE_WIN
-            string path5W = Application.dataPath + "/../Builds/sumo/Build/sumo.exe";
-            Process.Start(path5W);
+            if (ButtonNumber < 10) {
+                string pathGame1W = Application.dataPath + "/../Builds/" + ButtonName + "/Build/team-0" + ButtonName + ".exe";
+                Process.Start(pathGame1W);
+            }
+            string pathGameW = Application.dataPath + "/../Builds/" + ButtonName + "/Build/team-" + ButtonName + ".exe";
+            Process.Start(pathGameW);
         #endif
     }
 
@@ -85,15 +46,20 @@ public class LauncherUI : MonoBehaviour
             //     });
             // }
 
+            string folderPath = Application.dataPath + "/../commands/";
+            string[] files = Directory.GetFiles(folderPath);
+            foreach (string file in files) {
+                Process.Start(file);
+            }
 
-            string pathRefreshW = Application.dataPath + "/../Builds/Automation.bat";
-            Process.Start(new ProcessStartInfo {
-                FileName = pathRefreshW,
-                UseShellExecute = false,
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-                CreateNoWindow = true
-            });
+            // string pathRefreshW = Application.dataPath + "/../Builds/Automation.bat";
+            // Process.Start(new ProcessStartInfo {
+            //     FileName = pathRefreshW,
+            //     UseShellExecute = false,
+            //     RedirectStandardOutput = true,
+            //     RedirectStandardError = true,
+            //     CreateNoWindow = true
+            // });
         #endif
     }
 
