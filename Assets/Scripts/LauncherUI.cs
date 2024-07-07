@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class LauncherUI : MonoBehaviour
 {
@@ -20,6 +21,19 @@ public class LauncherUI : MonoBehaviour
             Process.Start(pathGameW);
         #endif
     }
+
+    public void refreshCurrent(BaseEventData data) {
+        PointerEventData pointerData = data as PointerEventData;
+        if (pointerData != null && pointerData.button == PointerEventData.InputButton.Right)
+        {
+            string ButtonRName = pointerData.pointerPress.name;
+            #if UNITY_STANDALONE_WIN
+                string pathCurrW = Application.dataPath + "/../commands/" + ButtonRName + ".bat";
+                Process.Start(pathCurrW);
+            #endif
+        }
+    }
+ 
 
     // public void refreshSelected() {
     //     #if UNITY_STANDALONE_WIN
