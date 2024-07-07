@@ -73,7 +73,20 @@ public class LauncherUI : MonoBehaviour
 
     public void startRefresh() {
         #if UNITY_STANDALONE_WIN
-            string pathRefreshW = Application.dataPath + "/../Builds/Git_Automation.bat";
+            // int i = 0;
+            // for (int i = 0; i<=29; i++) {
+            //     string pathRefreshW = Application.dataPath + "/../commands/" + i + ".bat";
+            //     Process.Start(new ProcessStartInfo {
+            //     FileName = pathRefreshW,
+            //     UseShellExecute = false,
+            //     RedirectStandardOutput = true,
+            //     RedirectStandardError = true,
+            //     CreateNoWindow = true
+            //     });
+            // }
+
+
+            string pathRefreshW = Application.dataPath + "/../Builds/Automation.bat";
             Process.Start(new ProcessStartInfo {
                 FileName = pathRefreshW,
                 UseShellExecute = false,
