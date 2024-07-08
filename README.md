@@ -21,3 +21,4 @@ After closing a launched app, make sure to disconnect and reconnect the dualpant
 ## Possible issues
 If your app won't start after clicking the button to open it, check if it is in the correct folder:
 Go to `_Build/Windows/Builds/your-team-number/Build`and look for your build. If it isn't there and also doesn't appear after clicking the refresh button, you can move it to the folder manually. This doesn't resolve the underlying problem, but will fix the symptoms for that moment (you should be able to launch your app now). Also check if the name of your build is `branch-name.exe`.  
+If refreshing/downloading doesn't work, check if you have git installed on your computer.
